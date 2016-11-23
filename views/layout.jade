@@ -1,3 +1,6 @@
+- var HOMEPAGE = false;
+block variables
+
 doctype html
 html
     head
@@ -7,7 +10,9 @@ html
 
     body
         include ./includes/navbar.jade
-        include ./includes/jumbotron.jade
+        //jumbotron only visible on the home page
+        if HOMEPAGE
+            include ./includes/jumbotron.jade
 
         .container
             block content
