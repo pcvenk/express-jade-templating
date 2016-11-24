@@ -3,11 +3,11 @@ var router = express.Router();
 var fs = require('fs');
 
 var document;
-fs.readFile('../json/services.json', 'utf8', function(err, data){
+fs.readFile('../json/services.json', 'utf8', function(err, doc){
     if(err){
         throw err;
     }else{
-        document = JSON.parse(data);
+        document = JSON.parse(doc);
     }
 });
 
